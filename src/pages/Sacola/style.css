@@ -2,6 +2,7 @@
   background-color: #F5F5F5;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -32,5 +33,57 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
+  width: 75%;
 }
 
+.precos{
+  width: 100px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.precos h4{
+  width: 100%;
+  text-align: end;
+}
+
+.resumo{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff;
+  margin-top: 20px;
+  width: 100%;
+  padding: 30px 20px;
+}
+
+.resumo p{
+  font-size: 14px;
+}
+
+.resumo h4{
+  font-size: 14px;
+  font-weight: 700;
+  color: #9222DC;
+}
+
+.resumo h3{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.resumo div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resumo button{
+  background-color: #9222DC;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  padding: 16px 0;
+  border-radius: 4px;
+}
