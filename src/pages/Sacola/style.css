@@ -1,0 +1,36 @@
+.sacola{
+  background-color: #F5F5F5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  background-color: #fff;
+  margin: 20px 8px;
+  padding: 39px 20px;
+  border-radius: 4px;
+  border: 1px solid #CCCCCC;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.produto{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.produto img{
+  width: 60px;
+  height: 60px;
+}
+
+.produto h3{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
