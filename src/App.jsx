@@ -1,7 +1,10 @@
+import Header from './components/Header'
+import './app.css'
+
 function App() {
   return (
-    <div>
-      <h1>Beleza na web</h1>
+    <div className="app">
+      <Header />
     </div>
   )
 }
