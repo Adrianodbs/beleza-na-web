@@ -30,7 +30,7 @@ function Header() {
           Confirmação
         </li>
       </ul>
-      <div>
+      <div className="paginas">
         {menu === 1 && <Sacola />}
         {menu === 2 && <Pagamento />}
         {menu === 3 && <Confirmacao />}
