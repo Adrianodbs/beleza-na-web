@@ -4,7 +4,7 @@ import { ProdutoContext } from '../../context/ProdutoContext'
 import Resumo from '../../components/Resumo'
 
 function Confirmacao() {
-  const { produto } = useContext(ProdutoContext)
+  const { produto, setMenu } = useContext(ProdutoContext)
   return (
     <div className="confirmacao">
       <div className="container">
@@ -22,7 +22,7 @@ function Confirmacao() {
           </div>
         ))}
       </div>
-      <Resumo children="Voltar ao inicio" />
+      <Resumo onClick={() => setMenu(1)} link="/" children="Voltar ao inicio" />
     </div>
   )
 }

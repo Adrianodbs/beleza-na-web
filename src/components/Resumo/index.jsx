@@ -1,8 +1,9 @@
 import { useContext } from 'react'
 import { ProdutoContext } from '../../context/ProdutoContext'
 import './style.css'
+import { Link } from 'react-router-dom'
 
-function Resumo({ children }) {
+function Resumo({ children, link, onClick }) {
   const { produto } = useContext(ProdutoContext)
   return (
     <div className="resumo">
@@ -22,7 +23,9 @@ function Resumo({ children }) {
         <h3>Subtotal</h3>
         <h3>R$ {produto.total?.toFixed(2)}</h3>
       </div>
-      <button>{children}</button>
+      <Link to={link}>
+        <button onClick={onClick}>{children}</button>
+      </Link>
     </div>
   )
 }

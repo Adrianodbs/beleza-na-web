@@ -6,6 +6,7 @@ export const ProdutoContext = createContext({})
 export const ProdutoProvider = ({ children }) => {
   const [produto, setProduto] = useState([])
   const [menu, setMenu] = useState(1)
+
   useEffect(() => {
     apiData.get().then(response => {
       setProduto(response.data)

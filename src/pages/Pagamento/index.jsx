@@ -1,7 +1,10 @@
+import { useContext } from 'react'
 import Resumo from '../../components/Resumo'
+import { ProdutoContext } from '../../context/ProdutoContext'
 import './style.css'
 
 function Pagamento() {
+  const { setMenu } = useContext(ProdutoContext)
   return (
     <div className="pagamento">
       <div className="container">
@@ -21,7 +24,11 @@ function Pagamento() {
           </div>
         </form>
       </div>
-      <Resumo children="Finalizar pedido" />
+      <Resumo
+        onClick={() => setMenu(3)}
+        link="/confirmacao"
+        children="Finalizar pedido"
+      />
     </div>
   )
 }

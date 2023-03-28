@@ -4,7 +4,7 @@ import { ProdutoContext } from '../../context/ProdutoContext'
 import Resumo from '../../components/Resumo'
 
 function Sacola() {
-  const { produto } = useContext(ProdutoContext)
+  const { produto, setMenu } = useContext(ProdutoContext)
 
   return (
     <div className="sacola">
@@ -19,7 +19,11 @@ function Sacola() {
           </div>
         ))}
       </div>
-      <Resumo children="Seguir para o pagamento" />
+      <Resumo
+        onClick={() => setMenu(2)}
+        link="/pagamento"
+        children="Seguir para o pagamento"
+      />
     </div>
   )
 }
