@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import './app.css'
+import { ProdutoProvider } from './context/ProdutoContext'
 
 function App() {
   return (

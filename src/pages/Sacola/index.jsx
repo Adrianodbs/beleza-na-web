@@ -4,7 +4,7 @@ import { ProdutoContext } from '../../context/ProdutoContext'
 import Resumo from '../../components/Resumo'
 
 function Sacola() {
-  const { produto, setProduto } = useContext(ProdutoContext)
+  const { produto } = useContext(ProdutoContext)
 
   return (
     <div className="sacola">
