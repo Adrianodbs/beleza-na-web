@@ -1,4 +1,5 @@
 .confirmacao{
+  max-width: 800px;
   width: 100%;
   background-color: #F5F5F5;
   display: flex;

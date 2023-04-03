@@ -24,7 +24,9 @@ function Resumo({ children, link, onClick }) {
         <h3>R$ {produto.total?.toFixed(2)}</h3>
       </div>
       <Link to={link}>
-        <button onClick={onClick}>{children}</button>
+        <button type="submit" onClick={onClick}>
+          {children}
+        </button>
       </Link>
     </div>
   )

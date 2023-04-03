@@ -6,6 +6,9 @@ export const ProdutoContext = createContext({})
 export const ProdutoProvider = ({ children }) => {
   const [produto, setProduto] = useState([])
   const [menu, setMenu] = useState(1)
+  const [cartao, setCartao] = useState('')
+  const [nome, setNome] = useState('')
+  const [validade, setValidade] = useState('')
 
   useEffect(() => {
     apiData.get().then(response => {
@@ -13,7 +16,20 @@ export const ProdutoProvider = ({ children }) => {
     })
   }, [])
   return (
-    <ProdutoContext.Provider value={{ produto, setProduto, menu, setMenu }}>
+    <ProdutoContext.Provider
+      value={{
+        produto,
+        setProduto,
+        menu,
+        setMenu,
+        cartao,
+        setCartao,
+        nome,
+        setNome,
+        validade,
+        setValidade
+      }}
+    >
       {children}
     </ProdutoContext.Provider>
   )

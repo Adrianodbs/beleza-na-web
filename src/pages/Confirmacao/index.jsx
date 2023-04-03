@@ -4,14 +4,15 @@ import { ProdutoContext } from '../../context/ProdutoContext'
 import Resumo from '../../components/Resumo'
 
 function Confirmacao() {
-  const { produto, setMenu } = useContext(ProdutoContext)
+  const { produto, setMenu, cartao, nome, validade } =
+    useContext(ProdutoContext)
   return (
     <div className="confirmacao">
       <div className="container">
         <h3>Compra efetuada com sucesso</h3>
-        <span>****.****.****.4545</span>
-        <span>Bruce Wayne</span>
-        <span>02/2027</span>
+        <span>{cartao}</span>
+        <span>{nome}</span>
+        <span>{validade}</span>
       </div>
       <div className="confirmacao__produtos">
         <h4>Produtos</h4>

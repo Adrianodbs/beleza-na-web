@@ -4,22 +4,47 @@ import { ProdutoContext } from '../../context/ProdutoContext'
 import './style.css'
 
 function Pagamento() {
-  const { setMenu } = useContext(ProdutoContext)
+  const { setMenu, cartao, setCartao, nome, setNome, validade, setValidade } =
+    useContext(ProdutoContext)
+
+  function handleData(e) {
+    e.preventDefault()
+  }
+
   return (
     <div className="pagamento">
       <div className="container">
         <h3>Cartão de crédito</h3>
-        <form>
+        <form onSubmit={handleData}>
           <label>Número</label>
-          <input type="text" placeholder="0000 0000 0000 0000" />
+          <input
+            required
+            type="text"
+            placeholder="0000 0000 0000 0000"
+            value={cartao}
+            onChange={e => setCartao(e.target.value)}
+          />
           <label>Nome do titular do cartão</label>
-          <input type="text" placeholder="Nome impresso no cartão" />
+          <input
+            required
+            type="text"
+            placeholder="Nome impresso no cartão"
+            value={nome}
+            onChange={e => setNome(e.target.value)}
+          />
           <div className="data-validade">
             <label>
-              Data de validade <input type="text" placeholder="MM/AA" />
+              Data de validade{' '}
+              <input
+                required
+                type="text"
+                placeholder="MM/AAAA"
+                value={validade}
+                onChange={e => setValidade(e.target.value)}
+              />
             </label>
             <label>
-              Código CVV <input type="text" placeholder="000" />
+              Código CVV <input required type="text" placeholder="000" />
             </label>
           </div>
         </form>
