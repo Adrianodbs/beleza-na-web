@@ -9,6 +9,7 @@ export const ProdutoProvider = ({ children }) => {
   const [cartao, setCartao] = useState('')
   const [nome, setNome] = useState('')
   const [validade, setValidade] = useState('')
+  const [CVV, setCVV] = useState('')
 
   useEffect(() => {
     apiData.get().then(response => {
@@ -27,7 +28,9 @@ export const ProdutoProvider = ({ children }) => {
         nome,
         setNome,
         validade,
-        setValidade
+        setValidade,
+        CVV,
+        setCVV
       }}
     >
       {children}
